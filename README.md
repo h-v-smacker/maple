@@ -6,3 +6,15 @@ This mod adds a maple tree to the minetest game. Originally written for the Home
 ## The tree
 
 ![Maple Tree](https://github.com/h-v-smacker/maple/blob/master/maple_in_the_wild.jpg)
+
+## Bonemeal
+
+If you are using the bonemeal mod, add this to mods.lua to enable mapple support:
+
+```
+if minetest.get_modpath("maple") then
+	bonemeal:add_sapling({
+		{"maple:maple_sapling", maple.grow_sapling, "soil"},
+	})
+end
+```
