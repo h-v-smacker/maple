@@ -9,7 +9,7 @@ This mod adds a maple tree to the minetest game. Originally written for the Home
 
 ## Bonemeal
 
-If you are using the bonemeal mod, add this to mods.lua to enable mapple support:
+If you are using the bonemeal mod, add this to mods.lua to enable maple support:
 
 ```
 if minetest.get_modpath("maple") then
