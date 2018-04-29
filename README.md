@@ -5,5 +5,4 @@ This mod adds a maple tree to the minetest game. Originally written for the Home
 
 ## The tree
 
-![Maple Tree]
-(https://github.com/h-v-smacker/maple/blob/master/maple_in_the_wild.jpg)
+![Maple Tree](https://github.com/h-v-smacker/maple/blob/master/maple_in_the_wild.jpg)
