@@ -147,3 +147,11 @@ minetest.register_craft({
 	recipe = "maple:fence_maple_wood",
 	burntime = 8,
 })
+
+
+-- integration with bonemeal
+if minetest.get_modpath("bonemeal") then
+	bonemeal:add_sapling({
+		{"maple:maple_sapling", maple.grow_sapling, "soil"},
+	})                                                
+end
