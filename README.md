@@ -20,3 +20,17 @@ if minetest.get_modpath("maple") then
 	})
 end
 ```
+
+## Technic chainsaw
+
+Add this to technic/technic/tools/chainsaw.lua to enable support for maple trees for the chainsaw tool:
+
+```
+-- Support maple
+if minetest.get_modpath("maple") then
+	timber_nodenames["maple:maple_tree"]         = true
+	if chainsaw_leaves then
+		timber_nodenames["maple:maple_leaves"] = true
+	end
+end
+```
