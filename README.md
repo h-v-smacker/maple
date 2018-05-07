@@ -34,3 +34,7 @@ if minetest.get_modpath("maple") then
 	end
 end
 ```
+
+## Stairs and slabs
+
+Maple tries to register fancy wooden shapes for maple wood with stairs or moreblocks.

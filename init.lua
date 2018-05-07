@@ -155,3 +155,34 @@ if minetest.get_modpath("bonemeal") then
 		{"maple:maple_sapling", maple.grow_sapling, "soil"},
 	})                                                
 end
+
+-- derivative blocks (stairs / microblocks / etc)
+if stairs and stairs.mod and stairs.mod == "redo" then
+
+	stairs.register_all("maple_wood", "maple:maple_wood",
+		{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		{"maple_wood.png"},
+		"Maple Wood Stair",
+		"Maple Wood Slab",
+		default.node_sound_wood_defaults())
+                                                                                        
+elseif minetest.global_exists("stairsplus") then
+                                                                                        
+	stairsplus:register_all("maple", "maple_wood", "maple:maple_wood", {
+		description = "Maple Wood",
+		tiles = {"maple_wood.png"},
+		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		sounds = default.node_sound_wood_defaults(),
+	})
+                                                                                        
+else
+
+	stairs.register_stair_and_slab("maple_wood", "maple:maple_wood",
+		{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		{"maple_wood.png"},
+		"Maple stair",
+		"Maple Slab",
+		default.node_sound_wood_defaults())
+
+                               
+end
