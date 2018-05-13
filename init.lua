@@ -186,3 +186,22 @@ else
 
                                
 end
+                                                                                        
+-- registering the wood type with drawers mod
+if minetest.get_modpath("drawers") and default then
+                                                                                        
+	drawers.register_drawer(":drawers:maple", {
+		description = "Maple",
+		tiles1 = drawers.node_tiles_front_other("drawers_maple_wood_front_1.png",
+			"drawers_maple_wood.png"),
+		tiles2 = drawers.node_tiles_front_other("drawers_maple_wood_front_2.png",
+			"drawers_maple_wood.png"),
+		tiles4 = drawers.node_tiles_front_other("drawers_maple_wood_front_4.png",
+			"drawers_maple_wood.png"),
+		groups = {choppy = 3, oddly_breakable_by_hand = 2},
+		sounds = drawers.WOOD_SOUNDS,
+		drawer_stack_max_factor = 4 * 8, -- normal chest size
+		material = drawers.WOOD_ITEMSTRING
+	})
+                                                                                        
+end

@@ -38,3 +38,7 @@ end
 ## Stairs and slabs
 
 Maple tries to register fancy wooden shapes for maple wood with stairs or moreblocks.
+
+## Drawers
+
+If storage drawers mod is available, maple registers the corresponding assortment of drawers.
