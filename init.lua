@@ -165,6 +165,13 @@ if stairs and stairs.mod and stairs.mod == "redo" then
 		"Maple Wood Stair",
 		"Maple Wood Slab",
 		default.node_sound_wood_defaults())
+                                                     
+	stairs.register_all("maple_tree", "maple:maple_tree",
+		{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		{"maple_tree_top.png", "maple_tree_top.png", "maple_tree.png"},
+		"Maple Trunk Stair",
+		"Maple Trunk Slab",
+		default.node_sound_wood_defaults())
                                                                                         
 elseif minetest.global_exists("stairsplus") then
                                                                                         
@@ -175,13 +182,27 @@ elseif minetest.global_exists("stairsplus") then
 		sounds = default.node_sound_wood_defaults(),
 	})
                                                                                         
+	stairsplus:register_all("maple", "maple_tree", "maple:maple_tree", {
+		description = "Maple Trunk",
+		tiles = {"maple_tree_top.png", "maple_tree_top.png", "maple_tree.png"},
+		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		sounds = default.node_sound_wood_defaults(),
+	})
+                                                                                        
 else
 
 	stairs.register_stair_and_slab("maple_wood", "maple:maple_wood",
 		{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		{"maple_wood.png"},
-		"Maple stair",
+		"Maple Stair",
 		"Maple Slab",
+		default.node_sound_wood_defaults())
+                                                                                        
+	stairs.register_stair_and_slab("maple_tree", "maple:maple_tree",
+		{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		{"maple_tree_top.png", "maple_tree_top.png", "maple_tree.png"},
+		"Maple Trunk Stair",
+		"Maple Trunk Slab",
 		default.node_sound_wood_defaults())
 
                                
