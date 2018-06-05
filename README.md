@@ -42,3 +42,7 @@ Maple tries to register fancy wooden shapes for maple wood with stairs or morebl
 ## Drawers
 
 If storage drawers mod is available, maple registers the corresponding assortment of drawers.
+
+## Arcs
+
+If pkarcs (simple arcs) mod is found, maple arcs are registered.

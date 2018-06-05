@@ -211,7 +211,7 @@ end
 -- registering the wood type with drawers mod
 if minetest.get_modpath("drawers") and default then
                                                                                         
-	drawers.register_drawer("maple:maple_drawer", {
+	drawers.register_drawer("maple:maple_drawerk", {
 		description = "Maple",
 		tiles1 = drawers.node_tiles_front_other("drawers_maple_wood_front_1.png",
 			"drawers_maple_wood.png"),
@@ -225,4 +225,9 @@ if minetest.get_modpath("drawers") and default then
 		material = "maple:maple_wood"
 	})
                                                                                         
+end
+              
+-- procedurally-generated arcs
+if minetest.get_modpath("pkarcs") then
+	pkarcs.register_node("maple:maple_wood")
 end
